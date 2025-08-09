@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// Define a custom dictionary of words and their corrections
+
 const customDictionary = {
   teh: "the",
   wrok: "work",
@@ -14,9 +14,7 @@ const SpellCheckApp = () => {
 
   const handleInputChange = (e) => {
     const text = e.target.value;
-    setInputText(text);
-
-    // Implement a basic spelling check and correction
+    setInputText(text);  
     const words = text.split(" ");
     const correctedWords = words.map((word) => {
       const correctedWord = customDictionary[word.toLowerCase()];
